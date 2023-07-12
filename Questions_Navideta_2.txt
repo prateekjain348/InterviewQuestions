@@ -1,0 +1,65 @@
+1.Oops concepts with serialisation,deserialization and in depth knowledge of encapsulation.
+	https://www.geeksforgeeks.org/serialization-in-java/
+	https://www.geeksforgeeks.org/encapsulation-in-java/#:~:text=Encapsulation%20is%20defined%20as%20the,the%20code%20outside%20this%20shield.
+
+ACID:- 	Atomicity(commit or rollback), 
+		Consistency(a-b <=> c+b ), 
+		Isolation (Multiply transactions at same time),
+		Durability (If A completed B should also complete even if system failure).
+https://www.geeksforgeeks.org/acid-properties-in-dbms/
+
+
+2.Gave a hashmap and told to find the 2nd highest max value.
+	Map<String, Integer> result = map.entrySet()
+                .stream()
+                .sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
+                        .collect(Collectors.toMap(Map.Entry::getKey,Map.Entry::getValue,(oldVal,newVal)->oldVal,LinkedHashMap::new));
+    System.out.println(result.entrySet().stream().skip(1).findFirst());
+
+* 3.Gave a CSV file of stock exchange and three subquestions on which data structures would be appropriate in which situation.
+
+4. Gave a space separated string and told to find the 2nd max string on basis of length.
+	Split,
+	Map,
+	Reverse Sort on Value
+	skip and find1st.
+
+
+5.sql query. Given two tables with varchar as primary key need to find the count of each id in table.
+
+6. Hibernate transactions.
+Difference between save and saveorupdate method in Hibernate.
+	Save method stores an object into the database. That means it insert an entry if the identifier doesn’t exist, else it will throw error. If the primary key already present in the table, it cannot be inserted.
+	This method calls save() or update() based on the operation. If the identifier exists, it will call update method else the save method will be called.
+
+@Transient annotation use in hibernate.
+	https://www.javatpoint.com/hibernate-transaction-management-example
+
+7. Write a code to print even and odd number in two different threads
+
+8. Difference between comparable and comparator and when to use what
+
+Inheritance, Polymorphism (Is Expert, knows tradeoffs, alternatives(Delegation,))
+	Inherited functions work slower than normal function as there is indirection.
+	Improper use of inheritance may lead to wrong solutions.
+	Often, data members in the base class are left unused which may lead to memory wastage.
+	Inheritance increases the coupling between base class and derived class.
+
+
+Java Collections (Is Expert, knows tradeoffs, alternatives)
+Exceptions, Generics (Can solve complex problem with hints)
+Skill Evaluation Advanced	Design Principles and Patterns (Can solve complex problem with hints)
+	Creational 	(Factory, Singleton, Builder)
+	Structural	(Decorator, )
+	Behavioural	()
+Multithreading and concurrency (Is Expert, knows tradeoffs, alternatives)
+Spring, AOP, ORM (Has used, knows basics)
+REST(Representational state transfer), SOAP(Simple object access protocol), Txn, Sessions, IO (Has used, knows basics)
+GC, Serialization, Reflection, Lambdas (Is Expert, knows tradeoffs, alternatives)
+DB - 
+	Normalization(
+		NF1 (Atomic Value)
+		NF2 (all non-key attributes are fully functional dependent on the primary key)
+		NF3 (It is also used to achieve the data integrity)
+		), Joins, Simple Queries (Can solve complex problem with hints)
+What were the specific scenarios covered in the interview and the candidates response very briefly.	I asked many problem solving question and candidate answered them very well, Very good in problem solving

@@ -1,0 +1,378 @@
+AMX_Questions:- 
+How to solve diamond problem using default methods in Java?
+How Microservies intract with each other.
+Design Pattern related to Micro Services.
+List all Design Pattern.
+Singleton and Factory design Pattern implementation?
+Design Principles for Spring. (SOLID)
+Dependency Injection.
+What-is-dependency-injection-and-inversion-of-control-in-spring-framework
+IoC v/s DI.
+What is Autowiring?
+What is BeanFactory?
+Application Context in BeanFactory?
+Different ways of defining a bean?
+Different scopes of a bean?
+New features of Java8?
+What is Functional Interfaces?
+What are Marker Interfaces?
+What is serialization and How to implement serializable in Class?
+Which Stream APIs You have used?
+Difference b/w HashMap,LinkedHashMap, HashTable, TreeMap?
+ConcurrentHashMap.
+MultiThreading
+What are the ways of creating thread?
+Executor Class vs Threadpool
+Fork and Join?	
+Different Memories In Java?
+JVM, JDK, JRE?
+GC?
+Steps to Make Class Immutable?
+Steps to Make Singleton Class
+How to prevent Singleton Pattern from Reflection, Serialization and Cloning?
+What is the purpose of Enums in Java?
+List Annotations in Springboot?
+
+Transient Keyword.
+Aggregation, Composition, Association.
+
+-----------------------------------------------------------------
+
+Coforge:
+Difference in Interface and Abstract?
+Requirement of Default and Static in Interface?	
+Functional Interface?
+Explain Stream methods and Optional Methods of Java8.
+Rest APIs.
+Diff in Post/Put
+Update specific field of Object.
+Where would you handle exceptions: controller, service, repository?
+What is Bean scope, default scope?
+What is the Lifecycle of a bean?
+Give Exmple of Dependency Injection?
+How to expose your APIs to your Client?	(Swagger)
+What is Mocking?
+Question regarding Junit5?
+Requirement of Design Pattern?
+-----------------------------------------------------------------
+
+HCL_JavaDeveloper:
+List down feature of Java8.
+ConcurrentHashmap works internally. (when to use this)
+Design Patterns and where have you used them in your project?
+How to Create own exception?
+Checked vs unchecked Exception?
+Diff b/t exception and error.
+Worked on MultThreading?
+How do you create ThreadPool?
+ACID Properties?
+Where in the application you have used ACID Properties?
+How to configure Actuator in SpringBoot? What are default points exposed and how to add new endpoints?
+If a parent bean is singleton and Child Bean is Prototype, When we do a getBean on Parent what is the scope of child here?
+What is Mybatis and how to configure mybatis in SpringBoot?
+How do you trace a defect?
+Have you Worked on DB performance tuning ?
+How are your APIs are secured?
+What are the agile ceremonies you attend?
+What is your team velocity?
+-----------------------------------------------------------------
+
+InterviewQuestions_Only_30:
+-----------------------------------------------------------------
+
+InterviewQuestions:
+
+Java OOPs Concepts
+	Object
+	Class
+	Inheritance
+	Polymorphism
+	Abstraction
+	Encapsulation
+2 Interface in same class with same default method.
+Java static keyword?
+What's, is Polymorphism in Java or OOP?
+What is the difference between a string literal and a string object?
+== and equals
+What is a thread in Java?
+Difference between Overloading and Overriding?
+What is multilevel threading?
+What are the Exception Handling Keywords in Java?
+What is an Exception in Java?
+Type of Exception?
+Exception Handling in Java?
+Explain Java 7 ARM(automatic resource managemen) Feature and multi-catch block?
+What is the difference between final, finally, and finalize in Java?
+What happens when an exception is thrown by the main method?
+Can we have an empty catch block?
+Java 8 Features?
+What is the default method, and why is it required?
+What is Spring boot?
+What are the Spring Boot key components?
+Why Spring Boot over Spring?
+Actuators in SpringBoot?
+How does a spring boot application get started?
+What is Spring Actuator? What are its advantages?
+What is dependency Injection?
+What is an IOC container?
+What are Constraints in SQL?
+What is a Primary Key?
+What is a Join? List its different types.
+What is a Self-Join?
+What is an Index? Explain its different types.
+What is a Query?
+What is a Subquery? What are its types?
+What is a View?
+What are the TRUNCATE, DELETE and DROP statements?
+SQL query to find second highest salary?
+How are linked lists more efficient than arrays?
+What is a stack? What are the applications of stack?
+How does HashMap handle collisions in Java?
+Can we execute a java program without a main method?
+Can we Overload static methods in Java?
+What is a static block?
+Can we have multiple static blocks in our code?
+
+-----------------------------------------------------------------
+
+Paytm:
+Diff in SQE and MySQL?
+ACID Properties in Database?
+Difference in HashMap, HashTable, ConcurrentHashMap?
+Internal Working of HashMap in Java?
+How concurrency happens?
+How concurrency impacted?
+How does concurrency improve performance?
+Design Pattern?
+Singleton(Implementation ) and Factory Design Pattern?
+OverLoading Vs Overwriding ?
+Database Size on the basis of Application?
+Why there is a requirement to use SQL and NoSQL within same application?
+What is Order Management System?
+Talk about Large Transaction System.
+	We have to build search for that TS.
+	Table with 100Million Records.
+	We have to build search on the top of it, to return result to the user in sub-seconds.
+	Design Low level storage model.
+	System clusters should be leniently scalable. (Means When data grows, hardware requirement should not grow).
+	Should we store 3-5 months old Data in Our Database?
+	What if Redis down?
+What is cache control headers?
+ETag?
+Difference b/w post and put?
+Why there is a requirement of PUT if we have post?
+Why should we not use post when we have to update the Data ?
+Do I violate RESTfulness when using POST as UPDATE OR CREATE?
+
+
+-----------------------------------------------------------------
+AMX_Questions_2023March:
+What all exceptions you have come accressed?
+List of exceptions we got while connecting with database?
+On the load of startup I want to initialize this variable.
+Worked on Custom Exceptions?
+What is compileTime and what is runTime Error?
+Create Instance Variable.
+Can we create object of Inerface?
+Exception Hierarchy?
+Exception handling with method overriding?
+Remove Duplicates from List of Object.
+What this stream().sorted method accept as parameter?
+On what basis sort will happen in stream().sorted()?
+Can we use method reference to convert int to string?
+Write a Functional Interface?
+What is the use of @FunctionalInterface?
+If we write "new Eatable()", will it work ? here Eatable is interface.
+What is Executor Framework?
+Asked Springboot Version.
+Bean Cycle?
+Ways to implement the life cycle of a bean.
+Autowire annotation?
+How spring create bean?
+Conroller vs restController?
+Embeded servers?
+How to switch to another server?
+What are the ways to access your application.peoperties file, if located on different path?
+
+-----------------------------------------------------------------
+HarshalInterviewQuestions:
+Why should we preffer microservice over monolithic?
+Can multiple microservices share same database or different?
+Service Discovery in Microservice?
+Benifits of having Service Discovery?
+Explain Dependency Injection?
+How to configure new Datasource in springboot ? All ways of achiving this.
+Explain Annotations.
+Spring Security?
+Authentication and Auth?
+Circuit breaker pattern in Microservices?
+Constructor overloading with reference to Dependency injection?
+We have a Json file and 2 microservices , 1st one is putting data in this JSON file and 2nd one is consuming data from this. How will you handle locking of the file?
+Can we use SAGA to resolve distributed locking system?
+Will SAGA help in case we read Json file for put and consume case?
+What will heppen when we use POST to update the Data?
+There might be a change PUT won't work, can we use POST in that case?
+Application is incapable of processing PUT, Can we use POST to update data in Database ?
+Advantage/Disadvantage of using post to update Data?
+Distributed Locks in Spring-boot Microservice Environment?
+
+
+-----------------------------------------------------------------
+
+
+
+-----------------------------------------------------------------
+
+
+Question_Navideta_4:
+
+Inheritance parent child Relationship, which method will be called if 
+	a. overriden a normal mathod
+	b. overriden a static method
+What is hashcode and equals method?
+Why to make class as immutable if we wish to use as key in hashmap.
+How to make a class immutable?
+Java 8 features?
+Arraylist vs linkedlist?
+Sigleton Design Patters? 
+What diffferent ways you can achieve singleton design?
+How to make it threadsafe?
+Classnotfound Exception vs classdefinitionnotfound Error?
+Custom exception is runtime Exception or compile time?
+
+Questions_Navideta_2:
+Oops concepts with serialisation,deserialization and in depth knowledge of encapsulation.
+ACID Properties?
+Gave a hashmap and told to find the 2nd highest max value.
+Gave a CSV file of stock exchange and three subquestions on which data structures would be appropriate in which situation.
+Gave a space separated string and told to find the 2nd max string on basis of length.
+Given two tables with varchar as primary key need to find the count of each id in table.
+Hibernate transactions.
+Difference between save and saveorupdate method in Hibernate.
+@Transient annotation use in hibernate.
+Difference between comparable and comparator and when to use what?
+Inheritance, Polymorphism (Is Expert, knows tradeoffs, alternatives(Delegation))?
+Java Collections (Is Expert, knows tradeoffs, alternatives)
+Exceptions, Generics (Can solve complex problem with hints)
+Multithreading and concurrency (Is Expert, knows tradeoffs, alternatives)
+Spring, AOP, ORM (Has used, knows basics)
+REST(Representational state transfer), SOAP(Simple object access protocol), Txn, Sessions, IO (Has used, knows basics)
+GC, Serialization, Reflection, Lambdas (Is Expert, knows tradeoffs, alternatives)
+Database Normalization
+
+Questions_Navideta_3:
+Features introduced in java 7 for exception handling.
+Exception hierarchy?
+Runtime exception?
+Checked exception?
+Write custom exception.
+String immutability in java.
+String builder vs string buffer vs string?
+Final vs finally vs finalize?
+Collection?
+Custom sorting?
+Comparable vs comparator?
+Multithreading?
+Inter thread communication?
+wait(), notify(), and notifyAll()?
+Find Point of intersection of 2 linked list?
+Class lvl vs object lvl synchronisation?
+Spring vs Spring boot, dependency injection, exception handling, thread vs process, Simple Annotations questions. 
+Collection framework questions. 
+
+-----------------------------------------------------------------
+
+QuestionsByRaghu:
+What is AWS Lambda?
+Explain what is lambda in Java8?
+Factory vs Abstrace Factory
+Qualifier Annotation
+Primary Annotation
+What is a method reference?
+What is a flat map?
+What is Functional Interface in Java 8 ?
+What are the different types of different functional interfaces in Java 8?
+How do streams work?
+Have you used functional interfaces with Streams?
+What is the difference between spring and springboot?
+What is IOC in Spring?
+Have you heard about time complexity? What is it?
+
+How do you monitor Springboot?
+What is Spring Boot Actuator?
+what is Springboot autoconfiguration?
+What are profiles in springboot?
+What is  configuration.yml?
+What are the different services in AWS?
+Have you worked on S3?
+What type of EC2 have you used in your project?
+What is the use of kubernetes?
+How do you send containerized docker images sent to the database environment? ECR repo.
+What are the different levels in Kubernetes?
+What are the different components in the kubernetes cluster?
+What is the smallest unit in the kubernetes cluster?
+Is there anything inside pods?
+
+
+Observability:
+
+What are the key metrics you monitor in lambda?
+How do you visualize your logs?
+How do you gather metrics such as memory, utilization, execution time, failure & errors
+Have you used Appdynamics, Splunk, SignalFX, etc.?
+What is distributed tracing?
+
+
+Other questions:
+
+Can you do a migration from Oracle to Postgres?
+What tools does AWS have for migration?
+What happens when a transaction hits your website? What is F5/load balancing, what is SSL offloading?
+Can you deploy certifications on application servers?
+What is distributed tracing? What are the tools available?
+How do you ingest data in splunk?
+Can you create dashboards and alerts in splunk?
+Can you create VMs and security groups?
+What is canary deployment?
+What is your automation experience working with Jenkins pipeline?
+If you have an application that is deployed in active/active regions. How do you keep the applications in sync?
+Also how do you keep code in data center 1 and data center 2 in sync in getting 50% each?
+How do you go about debugging your microservices?
+How do you implement Dependency injection?How do you test the fault tolerance of your application?
+When do you use SQL and when NOSQL?
+What monitoring tools do you use?
+What is distributed tracing?
+Difference between unit tests, functional tests and integration tests?
+What do you know about peer testing?
+Why is Kafka server needed?
+In Microservices, how does one service talk with another service?
+What is service discovery? Have you used service registry?
+What is the difference between authorization and authentication?
+If you client calls one microservice which has to call two others. Let's say one of the end microservice fails, how do you tell which microservice it was?
+Do you use unique identifiers?
+What are Java 8 streams and when do you use it?
+Have you nodeJS?
+How do you start a project in springboot and microservices?
+What is Eureka registry?
+If you are monitoring Java applications in production, what metrics would you use to monitor those applications?
+Do you know about distributed tracing?
+How do you send metrics to Datadog?
+
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+
+WAP:
+WAP to implement Stack DS using LinkedList
+WAP to implement Singleton Design Pattern with ThreadSafety in this.
+List of Names, count number of names starts with letter r?
+Employee List to Map.
+List to Map – Duplicated Key!
+List to Map – Sort & Collect
+Given an array A[] and a number x, check for pair in A[] with sum as x;
+In Tree, Print Level Order.
+In Tree, Print Last Level.
+In Tree, Print Left View.
+In Tree, Print Right View.
+In Tree, Print height.
+Write a code to print even and odd number in two different threads

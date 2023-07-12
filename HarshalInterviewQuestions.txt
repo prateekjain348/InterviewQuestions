@@ -1,0 +1,31 @@
+Why should we preffer microservice over monolithic?
+Can multiple microservices share same database or different?
+Service Discovery in Microservice?
+Benifits of having Service Discovery?
+
+Explain Dependency Injection?
+
+How to configure new Datasource in springboot ? All ways of achiving this.
+Explain Annotations.
+
+	
+
+
+
+
+
+Spring Security?
+Authentication and Auth?
+ 
+
+
+- Circuit breaker pattern in Microservices?
+- Constructor overloading with reference to Dependency injection?
+- We have a Json file and 2 microservices , 1st one is putting data in this JSON file and 2nd one is consuming data from this. How will you handle locking of the file?
+- Can we use SAGA to resolve distributed locking system?
+- Will SAGA help in case we read Json file for put and consume case?
+- What will heppen when we use POST to update the Data?
+- There might be a change PUT won't work, can we use POST in that case?
+- Application is incapable of processing PUT, Can we use POST to update data in Database ?
+- Advantage/Disadvantage of using post to update Data?
+- Distributed Locks in Spring-boot Microservice Environment?

@@ -1,0 +1,9 @@
+QTSolutions:-
+Make Class Immutable?
+DeepCopy and shallow copy?	// https://www.geeksforgeeks.org/difference-between-shallow-and-deep-copy-of-a-class/
+	In Shallow copy, a copy of the original object is stored and only the reference address is finally copied. 
+	In Deep copy, the copy of the original object and the repetitive copies both are stored.
+Datastructure used in Hashmap and how that works?	//https://www.javatpoint.com/working-of-hashmap-in-java#:~:text=HashMap%20contains%20an%20array%20of,for%20storing%20Key%20and%20Value.
+	HashMap contains an array of the nodes, and the node is represented as a class. 
+	It uses an array and LinkedList data structure internally for storing Key and Value.
+	

@@ -1,0 +1,23 @@
+Current Roles and Responsibilites.
+More about the Application.
+Database Size on the basis of Application.
+
+Most of the question are real life, related to my application and resume only.
+Why there is a requirement to use SQL and NoSQL within same application?
+What is Order Management System.
+Talk about Large Transaction System.
+	We have to build search for that TS.
+	Table with 100Million Records.
+	We have to build search on the top of it, to return result to the user in sub-seconds.
+	Design Low level storage model.
+	System clusters should be leniently scalable. (Means When data grows, hardware requirement should not grow).
+	Should we store 3-5 months old Data in Our Database?
+	What if Redis down?
+What is cache control headers?
+ETag?
+
+
+Difference b/w post and put?
+Why there is a requirement of PUT if we have post?
+Why should we not use post when we have to update the Data ?
+Do I violate RESTfulness when using POST as UPDATE OR CREATE?

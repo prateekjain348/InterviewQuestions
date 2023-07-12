@@ -1,0 +1,59 @@
+List down feature of Java8
+	Some of the important Java 8 features are;
+		forEach() method in Iterable interface.
+		default and static methods in Interfaces.
+		Functional Interfaces and Lambda Expressions.
+		Java Stream API for Bulk Data Operations on Collections.
+		Java Time API.
+		Collection API improvements.
+		Concurrency API improvements.
+		Java IO improvements.
+
+Employee List to Map.	\\ https://mkyong.com/java8/java-8-convert-list-to-map/
+
+ConcurrentHashmap works internally. (when to use this)
+
+Design Patterns and where have you used them in your project.
+
+Create Singleton Class.
+
+How to Create own exception.
+
+Checked vs unchecked Exception.
+
+Diff b/t exceltion and error.
+
+If bug raised after release of new feature on Prod, and application performance gets slow, how will you tackle this?
+
+Worked on MultThreading?
+
+How do you create ThreadPool?
+
+ACID Properties. // https://www.geeksforgeeks.org/acid-properties-in-dbms/
+
+Where in the application you have used this?
+
+What Are SOLID Principles?
+
+Advantage of Spring Boot Adds?
+
+How to configure Actuator in SpringBoot? What are default points exposed and how to add new endpoints?
+
+Different Scopes of Bean?	//https://www.tutorialspoint.com/spring/spring_bean_scopes.htm
+
+If a parent bean is singleton and Child Bean is Prototype, When we do a getBean on Parent what is the scope of child here?
+	Let us look at a simple example when a prototype bean injected inside a singleton bean. Individually when a prototype bean used, every time a new instance is expected and for singleton the same instance. Singleton Bean always returns the same bean instance no matter where ever it is being referred.
+
+What is Mybatis and how to configure mybatis in SpringBoot?
+
+What are the Annotations you know, Please Explain them.
+
+How do you trace a defect?
+
+Have you Worked on DB performance tuning ?
+
+How are your APIs are secured? (JWT Token)
+Agile...
+Role in Current Project?
+What are the agile ceremonies you attend?
+What is your team velocity?

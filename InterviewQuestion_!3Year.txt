@@ -1,0 +1,124 @@
+Agile methodologies.
+    In practical terms, agile software development methodologies are all about delivering small pieces of working software quickly to improve customer satisfaction. These methodologies use adaptive approaches and teamwork to focus on continuous improvement.
+    
+Latest Java version he worked on?
+String Vs StringBuffer? https://www.digitalocean.com/community/tutorials/string-vs-stringbuffer-vs-stringbuilder
+    String is immutable whereas StringBuffer and StringBuilder are mutable classes. 
+
+    StringBuffer is thread-safe and synchronized whereas StringBuilder is not. 
+
+    That's why StringBuilder is faster than StringBuffer. 
+
+    String concatenation operator (+) internally uses StringBuffer or StringBuilder class.
+
+    The String class is immutable. The StringBuffer class is mutable. 
+
+    String is slow and consumes more memory when we concatenate too many strings because every time it creates new instance. 
+    StringBuffer is fast and consumes less memory when we concatenate t strings.
+    StringBuffer is thread-safe and synchronized
+
+How to Make Class Immutable?
+How to prevent Singleton Pattern from ThreadSafety, Serialization and Cloning?
+
+Transaction Management in Spring Boot?
+Can we achive TM in Microservice Architecture?
+Factory methods in Java9?
+Can we modify Object created using factory method Java9?
+Different scopes of Bean?
+HashMap v/s TreeMap?
+
+Design Pattern?
+Design Principles for Spring?
+
+What are Marker Interfaces?
+Some Examples of Marker Interfaces?
+    serializable, clonable.
+Can we create our own marker interface?
+
+
+Tell me the annotations we use for REST Api?
+Design Pattern related to Micro Services?
+How to trace exception in Microservices?
+What is the concept of statelessness in REST? //https://www.interviewbit.com/rest-api-interview-questions/
+What are HTTP Status codes?
+    1xx - represents informational responses
+    2xx - represents successful responses
+    3xx - represents redirects
+    4xx - represents client errors
+    5xx - represents server errors
+What are Idempotent methods? How is it relevant in RESTful web services domain?
+    Idempotent methods ensure that the responses to a request if called once or ten times or more than that remain the same. This is equivalent to adding any number with 0.
+    REST provides idempotent methods automatically. GET, PUT, DELETE, HEAD, OPTIONS, and TRACE are the idempotent HTTP methods. POST is not idempotent.
+
+
+Enums:-  https://www.javainuse.com/misc/enum-interview-questions
+    Why do we have the concept of enum?
+        Enum is the lists of constants, so it is useful when required to define a list of constants. Enum is useful when list of outcomes is limited.
+    Can a constuctor be invoked using an Enum?
+        Yes we can use the constuctor with the name of Enum.
+    Can we extend an Enum to add elements?
+        No, we cannot extend Enum further in the Code. It is defined only with keyword Enum and filled with elements but these elements cannot be added further in the program using some alternative method.
+    What does ordinal() method do in Enum?
+        Ordinal method returns the order in which Enum instance are declared inside Enum. For example in a DayOfWeek Enum, you can declare days in order they come e.g.
+
+
+What happens if we do not override hashcode() and equals() in hashmap?
+    You must override hashCode in every class that overrides equals.
+    Failure to do so will result in a violation of the general contract for Object. hashCode, which will prevent your class from functioning properly in conjunction with all hash-based collections, including HashMap, HashSet, and Hashtable.
+
+Can we use Object as a Key in Hashmap? https://howtodoinjava.com/java/collections/hashmap/design-good-key-for-hashmap/
+    A simple thumb rule is to use immutable objects as keys in a HashMap.
+    because: If it were mutable, then the hashcode() value or equals() condition might change, and you would never be able to retrieve the key from your HashMap.
+
+https://www.interviewbit.com/docker-interview-questions/
+    What is the docker command that lists the status of all docker containers?
+    Can a paused container be removed from Docker?
+Can you tell the difference between CMD and ENTRYPOINT?
+
+What’s the init container and when it can be used?
+What is the role of Load Balance in Kubernetes?
+    Load balancing is a way to distribute the incoming traffic into multiple backend servers, which is useful to ensure the application available to the users.
+Can we have multiple Containers in a POD?
+How to avoid scheduling pods on certain nodes?
+    Lable in Node. and Afinity in Pod.
+
+Code:- ***************
+    Given List of Objects. Sort them on the basis of multiple values.
+    Print Frequency of characters in a String.
+    Use of Optional in Java8?
+Algorithim
+    Luhn algorithm.
+    Flood fill algorithm
+
+
+RollNum, Name, Marks
+1, A, 51
+2, D, 64
+3, C, 75
+4, B, 90
+
+select 
+ Name, Marks,
+  CASE 
+    WHEN max_grade < 20 then 'F' 
+    WHEN max_grade < 40 then 'D'
+    WHEN max_grade < 60 then 'C'
+    WHEN max_grade < 80 then 'B'
+    ELSE 'A'
+  END AS Grade_details 
+FROM students 
+ORDER BY id;
+
+
+
+
+try {
+     sout("1");
+     return;
+    } catch (FileNotFoundException fileNotFound) {
+        sout("2");
+        return;
+    } finally {
+        sout("3");
+        return;
+    }

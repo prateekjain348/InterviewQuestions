@@ -1,0 +1,34 @@
+Q1. Reverse a linked list between two positions?
+	https://www.geeksforgeeks.org/reverse-sublist-linked-list/
+
+Q2. Find the smallest difference between a pair of values between two unsorted arrays.
+	https://www.geeksforgeeks.org/smallest-difference-pair-values-two-unsorted-arrays/
+
+Q3. Q. n ugly number is a positive integer whose prime factors are limited to 2, 3, and 5. 
+	https://www.geeksforgeeks.org/ugly-numbers/#:~:text=import%20java.lang.-,Math,-%3B
+
+
+Q2. Given a string s, find the length of the longest substring without repeating characters.
+
+Question 3:-  Given two strings ‘str1’ and ‘str2’ of size m and n respectively. The task is to remove/delete/replace a minimum number of characters from/in str1 to transform it into str2.  (HARD)
+
+Question 1:- You are given an integer array height of length n. There are n vertical lines drawn such that the two endpoints of the ith line are (i, 0) and (i, height[i]).
+
+Question 1:- There is one meeting room in an office. There are N meetings in the form of (S[i], F[i]) where S[i] is the start time of meeting i and F[i] is the finish time of meeting i. The task is to find the maximum number of meetings that can be accommodated in the meeting room. Given that at a time only one meeting can be held in a room.
+	https://www.geeksforgeeks.org/find-maximum-meetings-in-one-room/
+
+Question 2:- There are n petrol stations along a circular route, where the amount of petrol at the ith station is petrol[i].
+	https://www.geeksforgeeks.org/find-a-tour-that-visits-all-stations/
+
+1- N meetings in one room
+2- Course Schedule
+3- Given an array, print the Next Greater Element (NGE) for every element
+
+Problem 1(Medium): Group Anagrams-Given an array of strings strs, group the anagrams together. You can return the answer in any order.
+An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.
+
+Problem 2 (Medium): Given a singly Linked List and a number k, Rotate the Linked list by k places.
+	https://www.geeksforgeeks.org/rotate-a-linked-list/#:~:text=public%20class-,LinkedList,-%7B
+Problem 3- (Hard) :Find Maximum path sum in a binary tree. The path sum of a path is the sum of the node's values in the path.
+	https://www.geeksforgeeks.org/find-maximum-path-sum-in-a-binary-tree/
+

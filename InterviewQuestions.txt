@@ -1,0 +1,268 @@
+Core Java, Advance
+Java, Multithreading,
+Springboot,Spring
+Framework, Database
+
+
+Excellent communication skills,
+Experience working in startups is
+preferred
+
+
+Experience working on Core Java and Advanced
+Java.
+
+
+Good Experience in Springboot
+
+Good hands on in Multi threading, data structure &
+algorithm.
+
+
+Good experience in Database
+
+
+--------------------------------------------------------
+Java OOPs Concepts
+	Object
+	Class
+	Inheritance
+	Polymorphism
+	Abstraction
+	Encapsulation
+
+
+2 Interface in same class with.	(Confused in Interfceand).
+
+	
+
+Java static keyword
+
+What's, is Polymorphism in Java or OOP?
+
+what is the difference between a string literal and a string object?
+	String strObject = new String("Java");
+	and
+	String strLiteral = "Java";
+
+== and equals
+
+What is a thread in Java?
+	1) By extending java.lang.Thread class, or
+	2) By implementing java.lang.Runnable interface.	
+
+Difference between Overloading and Overriding?
+
+What is multilevel threading
+	Multithreading is a Java feature that allows concurrent execution of two or more parts of a program for maximum utilization of CPU. Each part of such program is called a thread. So, threads are light-weight processes within a process.
+
+What are the Exception Handling Keywords in Java?
+What is an Exception in Java?
+Type of Exceltion
+Exception Handling
+	try{
+	throws 
+	return 0
+	}	
+	catch(Exceltion e){return 1}
+	findlly{return 2}
+
+Explain Java 7 ARM Feature and multi-catch block?
+What is the difference between final, finally, and finalize in Java?
+	final and finally are keywords in java whereas finalize is a method.
+	final keyword can be used with class variables so that they can’t be reassigned, with the class to avoid extending by classes and with methods to avoid overriding by subclasses, finally keyword is used with try-catch block to provide statements that will always get executed even if some exception arises, usually finally is used to close resources. finalize() method is executed by Garbage Collector before the object is destroyed, it’s a great way to make sure all the global resources are closed.
+
+List of objects to map in java 8
+ 
+ Map<Integer, String> result1 = list.stream().collect(
+                    Collectors.toMap(Employee::getId, Employee::getName));
+
+
+What happens when an exception is thrown by the main method?
+	When an exception is thrown by a main() method, Java Runtime terminates the program and prints the exception message and stack trace in the system console.
+
+Can we have an empty catch block?
+	We can have an empty catch block but it’s an example of bad programming. We should never have an empty catch block because if the exception is caught by that block, we will have no information about the exception and it wil be a nightmare to debug it. There should be at least a logging statement to log the exception details in console or log files.
+
+Java 8 Features (https://www.javatpoint.com/java-8-features)
+	Lambda expressions,
+	Method references,
+	Functional interfaces,
+	Stream API,
+	Default methods,
+	Base64 Encode Decode,
+	Static methods in interface,
+	Optional class,
+	Collectors class,
+	ForEach() method,
+	Nashorn JavaScript Engine,
+	Parallel Array Sorting,
+	Type and Repating Annotations,
+	IO Enhancements,
+	Concurrency Enhancements,
+	JDBC Enhancements etc.		
+
+Functional Interface	
+
+What is the default method, and why is it required?	(https://www.interviewbit.com/java-8-interview-questions/)
+	A method in the interface that has a predefined body is known as the default method. It uses the keyword default. default methods were introduced in Java 8 to have 'Backward Compatibility in case JDK modifies any interfaces. In case a new abstract method is added to the interface, all classes implementing the interface will break and will have to implement the new method. With default methods, there will not be any impact on the interface implementing classes. default methods can be overridden if needed in the implementation. Also, it does not qualify as synchronized or final.
+
+List of Objects to Map:-  https://mkyong.com/java8/java-8-convert-list-to-map/	
+List to Map – Duplicated Key!
+List to Map – Sort & Collect
+
+Design Patterns in Java	https://www.javatpoint.com/design-patterns-in-java
+
+-----------
+https://www.interviewbit.com/spring-boot-interview-questions/
+
+What is Spring boot?
+What are the Spring Boot key components?
+Why Spring Boot over Spring?
+Actuators
+How does a spring boot application get started?
+	 Just like any other Java program, a Spring Boot application must have a main method. This method serves as an entry point, which invokes the SpringApplication#run method to bootstrap the application.
+
+What is Spring Actuator? What are its advantages?
+	An actuator is an additional feature of Spring that helps you to monitor and manage your application when you push it to production. These actuators include auditing, health, CPU usage, HTTP hits, and metric gathering, and many more that are automatically applied to your application.
+
+What is dependency Injection?
+	The process of injecting dependent bean objects into target bean objects is called dependency injection.
+
+	Setter Injection: The IOC container will inject the dependent bean object into the target bean object by calling the setter method.
+	Constructor Injection: The IOC container will inject the dependent bean object into the target bean object by calling the target bean constructor.
+	Field Injection: The IOC container will inject the dependent bean object into the target bean object by Reflection API.
+
+What is an IOC container?
+	IoC Container is a framework for implementing automatic dependency injection. It manages object creation and its life-time and also injects dependencies into the class.
+
+-----------
+https://www.interviewbit.com/sql-interview-questions/
+What are Constraints in SQL?
+	NOT NULL - Restricts NULL value from being inserted into a column.
+	CHECK - Verifies that all values in a field satisfy a condition.
+	DEFAULT - Automatically assigns a default value if no value has been specified for the field.
+	UNIQUE - Ensures unique values to be inserted into the field.
+	INDEX - Indexes a field providing faster retrieval of records.
+	PRIMARY KEY - Uniquely identifies each record in a table.
+	FOREIGN KEY - Ensures referential integrity for a record in another table.
+
+What is a Primary Key?
+	The PRIMARY KEY constraint uniquely identifies each row in a table. It must contain UNIQUE values and has an implicit NOT NULL constraint.
+
+What is a Join? List its different types.
+	(INNER) JOIN: Retrieves records that have matching values in both tables involved in the join. This is the widely used join for queries.
+	LEFT (OUTER) JOIN: Retrieves all the records/rows from the left and the matched records/rows from the right table.
+	RIGHT (OUTER) JOIN: Retrieves all the records/rows from the right and the matched records/rows from the left table.
+	FULL (OUTER) JOIN: Retrieves all the records where there is a match in either the left or right table.
+
+What is a Self-Join?
+	A self JOIN is a case of regular join where a table is joined to itself based on some relation between its own column(s). Self-join uses the INNER JOIN or LEFT JOIN clause and a table alias is used to assign different names to the table within the query.			
+
+What is an Index? Explain its different types.
+	A database index is a data structure that provides a quick lookup of data in a column or columns of a table. It enhances the speed of operations accessing data from a database table at the cost of additional writes and memory to maintain the index data structure.
+
+What is a Query?
+	A query is a request for data or information from a database table or combination of tables. A database query can be either a select query or an action query.	
+What is a Subquery? What are its types?
+	A subquery is a query within another query, also known as a nested query or inner query. It is used to restrict or enhance the data to be queried by the main query, thus restricting or enhancing the output of the main query respectively. For example, here we fetch the contact information for students who have enrolled for the maths subject:
+
+What is a View?
+	A view in SQL is a virtual table based on the result-set of an SQL statement. A view contains rows and columns, just like a real table. The fields in a view are fields from one or more real tables in the database.
+
+What are the TRUNCATE, DELETE and DROP statements?
+	DELETE statement is used to delete rows from a table.
+	TRUNCATE command is used to delete all the rows from the table and free the space containing the table.
+	DROP command is used to remove an object from the database. If you drop a table, all the rows in the table are deleted and the table structure is removed from the database
+
+SQL query to find second highest salary?
+	Name     Salary
+	---------------
+	abc     100000
+	bcd     1000000
+	efg     40000
+	ghi     500000			
+	 select *from employee where salary=(select Max(salary) from employee);
+	 select *from employee group by salary order by  salary desc limit 1,1;
+
+	 SELECT salary FROM employee ORDER BY salary desc limit n-1,1
+
+	Suppose you have to find 4th highest salary 
+		SELECT * FROM employee WHERE salary= (SELECT DISTINCT(salary) FROM employee ORDER BY salary DESC LIMIT n-1,1);	 
+-----------------------------------
+
+https://www.interviewbit.com/data-structure-interview-questions/
+
+7:- How are linked lists more efficient than arrays?
+
+10:-  What is a stack? What are the applications of stack?
+11:- How does HashMap handle collisions in Java?
+
+HashMap has complexity of O(1) for insertion and lookup. HashMap allows one null key and multiple null values. HashMap does not maintain any order
+https://www.tutorialspoint.com/Difference-between-TreeMap-HashMap-and-LinkedHashMap-in-Java
+
+
+
+Ask if they need anything
+Introduce yourself:
+
+
+
+
+------------------------------------------------------------------------------------------------------------
+https://www.javainterviewpoint.com/top-10-java-interview-questions-on-static-keyword/
+
+Can a static block exist without a main() method? //https://www.tutorialspoint.com/can-we-execute-a-java-program-without-a-main-method#:~:text=Yes%2C%20we%20can%20execute%20a,as%20a%20static%20initialization%20block.
+
+Can we Overload static methods in Java
+	Yes
+
+What is a static block?
+	A static block is a block of code inside a Java class that will be executed when a class is first loaded into the JVM. Mostly the static block will be used for initializing the variables.
+	The static block will be called only one while loading and it cannot have any return type, or any keywords (this or super).
+	class test
+	{
+		static int val;
+		static
+	        {
+	            val = 100;
+	        }
+	}		 	
+
+Can we have multiple static blocks in our code?
+	Yes, we can have more than one static block in our code. It will be executed in the same order it is written.
+------------------------------------------------------------------------------------------------------------
+
+
+List<Hosting> list = new ArrayList<>();
+list.add(new Hosting(1, "liquidweb.com", 80000));
+list.add(new Hosting(2, "linode.com", 90000));
+list.add(new Hosting(3, "digitalocean.com", 120000));
+list.add(new Hosting(4, "aws.amazon.com", 200000));
+list.add(new Hosting(5, "mkyong.com", 1));
+
+Map<Integer, String> result1 = list.stream().collect(
+                Collectors.toMap(Hosting::getId, Hosting::getName));
+
+Map<String, Long> result1 = list.stream().collect(
+                Collectors.toMap(Hosting::getName, Hosting::getWebsites));
+
+.sorted(Comparator.comparingLong(Hosting::getWebsites).reversed())
+
+Map<String, Long> result1 = list.stream().collect(
+            Collectors.toMap(Hosting::getName, Hosting::getWebsites,
+                    (oldValue, newValue) -> oldValue
+            )
+    );
+
+list.stream()
+list.stream().collect(Map);
+Collectors.toMap(Key,Value);
+Hosting::getId;
+
+
+
+Predicate<String> p = (s)->s.startsWith("G");
+String ="GABCD";
+if (p.test(st))
+        System.out.println(st);

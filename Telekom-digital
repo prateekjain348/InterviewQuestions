@@ -1,0 +1,52 @@
+Which API you are using for Observability?
+How to maintain tracing in microservices? // Sluth, zipkin
+How to maintain transactions between microservices? // 
+Which version of Spring you are using ? 2.7
+Opentracing, Micrometer? // Zipkin for trating, 
+
+What is your project, role?
+
+Config Registry in Microservices?
+
+Transaction Maintainance Design Patters in Microservices?
+
+How to restrict URL through API Gateway?
+
+Routing Configuration.
+
+How to differentiate api which need token and which does not required any token?
+
+In which object we set the restricted API?
+
+what is KeyClock?
+
+How do we generate token in Spring ?
+
+Detail of JWT token? 
+
+Which module of spring generate token ?
+
+Design Pattern?
+
+Write Code for builder design pattern.
+
+How to achive Synch in Singleton Design pattern ?
+
+Producer Consumer Problem?
+
+Code for producer consumer problem.
+	https://www.tutorialride.com/java-multithreading-programs/producer-consumer-problem-java-program.htm
+
+Implement Rest Architecture	
+
+ClassLoader? Type of class loader
+JIT
+blank final variable?
+
+What is Out in Sys.out.println()?
+	System refers to a final class that we can find in the java.lang.package and this System class has a public and static member field called PrintStream. 
+	All instances of the class PrintStream have a public method called println()
+	out is an instance of the PrintStream class 
+
+What is composition wrt relation between classes?
+	

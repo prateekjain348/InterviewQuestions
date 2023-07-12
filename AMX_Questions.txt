@@ -1,0 +1,187 @@
+How to solve diamond problem using default methods in Java?
+	MyInterface1.super.display();
+	//or,
+	MyInterface2.super.display();
+
+
+Questions on Microservices.
+How Microservies intract with each other.
+	A microservices-based application is a distributed system running on multiple processes or services, usually even across multiple servers or hosts. ... Therefore, services must interact using an inter-process communication protocol such as HTTP, AMQP, or a binary protocol like TCP, depending on the nature of each service.
+
+Design Pattern related to Micro Services.
+	https://www.edureka.co/blog/microservices-design-patterns#:~:text=Microservices%2C%20aka%20microservice%20architecture%2C%20is,implements%20a%20single%20business%20capability.
+		Aggregator
+		API Gateway
+		Chained or Chain of Responsibility
+
+Design Pattern
+	Singleton and Factory design Pattern
+
+Spring
+	Design Principles for Spring	=> https://www.baeldung.com/solid-principles
+		Single Resp:- 
+			A class should only have one responsibility. Furthermore, it should only have one reason to change.
+		Open Ended:- 
+			Open for Extension, Closed for Modification. Classes should be open for extension but closed for modification. In doing so, we stop ourselves from modifying existing code and causing potential new bugs in an otherwise happy application.
+
+			As part of a new project, imagine we've implemented a Guitar class.
+			We launch the application, and everyone loves it. But after a few months, we decide the Guitar is a little boring and could use a cool flame pattern to make it look more rock and roll.
+			At this point, it might be tempting to just open up the Guitar class and add a flame pattern — but who knows what errors that might throw up in our application.
+			Instead, let's stick to the open-closed principle and simply extend our Guitar class.
+
+		Liskove Sub:-
+			 If class A is a subtype of class B, we should be able to replace B with A without disrupting the behavior of our program.
+
+		Interface Seg. :-
+			Interface-Segregation Principle states that no client should be forced to depend on methods it does not use.
+			Larger interfaces should be split into smaller ones. By doing so, we can ensure that implementing classes only need to be concerned about the methods that are of interest to them.
+			
+		Dependency Inversion:-
+			The principle of dependency inversion refers to the decoupling of software modules. This way, instead of high-level modules depending on low-level modules, both will depend on abstractions.
+
+	Invesion of Control.
+		Inversion of control (IoC) is a programming principle.
+		Inversion of control- It means giving the control of creating and instantiating the spring beans to the Spring IOC container and the only work the developer does is configuring the beans in the spring xml file.
+
+	Dependency Injection.	=>	https://stackoverflow.com/questions/9403155/what-is-dependency-injection-and-inversion-of-control-in-spring-framework
+		Spring helps in the creation of loosely coupled applications because of Dependency Injection.
+		In Spring, objects define their dependencies and do not worry about how they will get those dependencies. It is the responsibility of Spring to provide the required dependencies for creating objects.
+		
+		For example: Suppose we have an object Employee and it has a dependency on object Address. We would define a bean corresponding to Employee that will define its dependency on object Address.
+		
+		When Spring tries to create an Employee object, it will see that Employee has a dependency on Address, so it will first create the Address object (dependent object) and then inject it into the Employee object.
+
+
+	IoC v/s DI.
+	
+	Application Context in BeanFactory?
+		The ApplicationContext is the central interface within a Spring application that is used for providing configuration information to the application. It implements the BeanFactory interface. Hence, the ApplicationContext includes all functionality of the BeanFactory and much more!
+
+	BeanFactory
+		https://dzone.com/articles/difference-between-beanfactory-and-applicationcont#:~:text=The%20ApplicationContext%20is%20the%20central,the%20BeanFactory%20and%20much%20more!
+
+	Different ways of defining a bean?	=>	https://www.tutorialspoint.com/spring/spring_bean_definition.htm
+		There are three different ways in which you can define a Spring bean:
+			1. annotating your class with the stereotype @Component annotation (or its derivatives)
+			2. writing a bean factory method annotated with the @Bean annotation in a custom Java configuration class.
+			3. declaring a bean definition in an XML configuration file.
+
+	Different scopes of Bean? => https://www.tutorialspoint.com/spring/spring_bean_scopes.htm
+
+	What is Autowiring?
+		Autowiring feature of spring framework enables you to inject the object dependency implicitly. 
+		It internally uses setter or constructor injection. Autowiring can't be used to inject primitive and string values. It works with reference only.
+
+	Different mods for which we can define the autowiring?	=>	https://www.javatpoint.com/autowiring-in-spring
+		The autowiring functionality has four modes. These are ' no ', ' byName ', ' byType ' and ' constructor '. Another autowire mode autodetect has been deprecated.
+
+	What is AOP?
+		AOP (aspect-oriented programming) is a programming style that can be adopted to define certain policies that in turn are used to define and manage the cross-cutting concerns in an application. In essence, it's a programming paradigm that enables your application to be adaptable to changes.
+		For example, when a method is executed, you can add extra functionality before or after the method execution.
+
+
+New features of Java8?
+What is Functional Interfaces?
+What are Marker Interfaces?
+	Interface with no method  (empty) example, serializable,clonable interface. also known as tag,ability interface.
+
+	By Serializable interface our object can be saved to file or can be travel accress the network.
+	By Clonable interface, our object are in position to produce exactly duplicate cloned object.
+
+What is serialization and How to implement serializable in Class? // https://www.geeksforgeeks.org/serialization-in-java/
+	private static final long serialversionUID = 129348938L;
+	Serialization is a mechanism of converting the state of an object into a byte stream. Deserialization is the reverse process where the byte stream is used to recreate the actual Java object in memory. This mechanism is used to persist the object. 
+	The byte stream created is platform independent. So, the object serialized on one platform can be deserialized on a different platform. To make a Java object serializable we implement the java.io.Serializable interface. The ObjectOutputStream class contains writeObject() method for serializing an Object. 
+
+	Points to remember 
+		1. If a parent class has implemented Serializable interface then child class doesn’t need to implement it but vice-versa is not true. 2. Only non-static data members are saved via Serialization process. 
+		3. Static data members and transient data members are not saved via Serialization process. So, if you don’t want to save value of a non-static data member then make it transient. 
+		4. Constructor of object is never called when an object is deserialized. 
+		5. Associated objects must be implementing Serializable interface.
+
+	Transient is a variables modifier used in serialization. At the time of serialization, if we don't want to save value of a particular variable in a file, then we use transient keyword. When JVM comes across transient keyword, it ignores original value of the variable and save default value of that variable data type.
+
+	SerialVersionUID The Serialization runtime associates a version number with each Serializable class called a SerialVersionUID, which is used during Deserialization to verify that sender and receiver of a serialized object have loaded classes for that object which are compatible with respect to serialization. If the receiver has loaded a class for the object that has different UID than that of corresponding sender’s class, the Deserialization will result in an InvalidClassException. 
+
+Which Stream APIs You have used?
+
+HashMap,LinkedHashMap, HashTable, TreeMap?
+	https://www.geeksforgeeks.org/differences-between-hashmap-and-hashtable-in-java/
+	https://www.techiedelight.com/difference-between-hashmap-treemap-linkedhashmap-java/#:~:text=The%20HashMap%20and%20LinkedHashMap%20classes,linked%20list%20buckets%20in%20Java.
+		Hashtable is belongs to the Collection framework; ConcurrentHashMap belongs to the Executor framework.
+		Hashtable uses single lock for whole data. ConcurrentHashMap uses multiple locks on segment level (16 by default) instead of object level i.e. whole Map.
+		ConcurrentHashMap locking is applied only for updates. 
+
+ConcurrentHashMap.
+
+MultiThreading
+What are the ways of creating thread?
+
+Executor Class vs Threadpool
+	1) The first and foremost difference between Thread and Executor is that java.lang.Thread is a class in Java while java.util.concurrent.Executor is an interface.
+
+	2) The Executor concept is actually an abstraction over parallel computation. It allows concurrent code to be run in a managed way. On the other hand, Thread is a concrete way to run the code in parallel.
+
+	Read more: https://javarevisited.blogspot.com/2016/12/difference-between-thread-and-executor.html#ixzz7xGoHfKlM
+
+https://www.java67.com/2015/06/java-countdownlatch-example.html
+https://www.java67.com/2015/06/how-to-use-cyclicbarrier-in-java.html
+
+
+Can we call run method directly in java?
+	No, you can not directly call run method to start a thread. You need to call start method to create a new thread. If you call run method directly , it won't create a new thread and it will be in same stack as main. As you can see when we are directly calling run method, it is not creating new threads.
+
+Fork and Join?	
+	In Java, the fork/join framework provides support for parallel programming by splitting up a task into smaller tasks to process them using the available CPU cores. In fact, Java 8's parallel streams and the method Arrays#parallelSort use under the hood the fork/join framework to execute parallel tasks.
+
+WAP to implement Stack DS using LinkedList
+	https://www.geeksforgeeks.org/implement-a-stack-using-singly-linked-list/
+
+Different Memories In Java?
+
+	Class(Method) Area
+	Heap
+	Stack
+	Program Counter Register
+	Native Method Stack
+	
+Kafka
+	
+WAP to implement Singleton Design Pattern
+ThreadSafety in this.
+	https://www.geeksforgeeks.org/prevent-singleton-pattern-reflection-serialization-cloning/
+
+https://www.geeksforgeeks.org/flood-fill-algorithm-implement-fill-paint/
+
+
+Make Class Immutable:-
+	To create an immutable class in Java, you need to follow these general principles:
+
+	1. Declare the class as final so it can’t be extended.
+	2. Make all of the fields private so that direct access is not allowed.
+	3. Don’t provide setter methods for variables.
+	4. Make all mutable fields final so that a field’s value can be assigned only once.
+	5. Initialize all fields using a constructor method performing deep copy.
+	6. Perform cloning of objects in the getter methods to return a copy rather than returning the actual object reference.
+
+Make Singleton Class:-
+	Remember the key points while defining a class as a singleton class that is while designing a singleton class:
+
+	1. Make a constructor private.
+	2. Write a static method that has the return type object of this singleton class. Here, the concept of Lazy initialization is used to write this static method.
+
+How to prevent Singleton Pattern from Reflection, Serialization and Cloning?
+	https://www.geeksforgeeks.org/prevent-singleton-pattern-reflection-serialization-cloning/
+
+	Overcome serialization issue:- To overcome this issue, we have to implement the method readResolve() method.
+	Overcome Clone: Implements Cloneable and Override clone method by returning same instance.
+
+
+
+Enums:-
+	https://www.youtube.com/watch?v=3iyKhywOZeg
+	The advantage of enum classes is that they can be serialized and deserialized out of the box. They have methods values() and valueOf . We can also get enum values by type using enumValues and enumValueOf functions. Enums have ordinal and we can hold constant data by each item.
+
+
+@Transaction
+https://dzone.com/articles/spring-transaction-propagation#:~:text=REQUIRED-,Propagation.,Spring%20container%20will%20create%20one.

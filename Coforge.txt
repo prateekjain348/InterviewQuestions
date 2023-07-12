@@ -1,0 +1,51 @@
+Interface, Abstract
+
+Requirement of Default in Interface?	
+	Default methods enable you to add new functionality to existing interfaces and ensure binary compatibility with code written for older versions of those interfaces. In particular, default methods enable you to add methods that accept lambda expressions as parameters to existing interfaces.
+
+Requirement of Static in Interface?
+	Java interface static method helps us in providing security by not allowing implementation classes to override them
+	We can't define interface static method for Object class methods
+
+
+Prerequisit for Lambda function.
+
+Functional Interface.
+List of Names, count number of names starts with letter r?
+Stream methods.
+
+Optional Methods
+
+Rest APIs.
+Diff in Post/Put
+Update specific field of Object.
+Everything is a resource Architecture in REST (Employee is a resource).
+Where would you handle exceptions: controller, service, repository?
+
+Bean scope, default.
+Lifecycle of a bean.
+
+Dependency Injection.
+Example.
+
+How to expose your APIs to your Client?	=> swagger
+
+What is Mocking?
+Junit5 
+Design Patterns
+Factory:-	In Factory pattern, we create object without exposing the creation logic to the client and refer to newly created object using a common interface.
+	Create Notification interface	=> Notification - notifyUser()
+	Create all implementation classes =>	SMSNotification, EmailNotification, PushNotification
+	Create a factory class NotificationFactory.java to instantiate concrete class. 
+		NotificationFactory => createNotification(String channel);
+
+	Main {
+		NotificationFactory notificationFactory = new NotificationFactory();
+        Notification notification = notificationFactory.createNotification("SMS");
+        notification.notifyUser();
+	}
+
+Use of Design Pattern:-
+A design pattern provides a general reusable solution for the common problems that occur in software design. The pattern typically shows relationships and interactions between classes or objects.
+By using design patterns, you can make your code more flexible, reusable, and maintainable.
+

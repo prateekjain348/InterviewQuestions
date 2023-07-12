@@ -1,0 +1,71 @@
+https://www.edureka.co/blog/interview-questions/top-apache-kafka-interview-questions-for-beginners/
+https://www.interviewbit.com/kafka-interview-questions/
+
+What is Kafka?
+	Apache Kafka is a streaming platform that is free and open-source. Kafka was first built at LinkedIn as a messaging queue, but it has evolved into much more. It's a versatile tool for working with data streams that may be applied to a variety of scenarios.
+
+	Kafka is a distributed system, which means it can scale up as needed. All you have to do now is add new Kafka nodes (servers) to the cluster.
+
+What are the traditional methods of message transfer? How is Kafka better from them?
+	Message Queuing:-	
+	Publisher - Subscriber Model:-
+
+2. List the various components in Kafka.
+	The four major components of Kafka are:
+
+	Topic – a stream of messages belonging to the same type
+	Producer – that can publish messages to a topic
+	Brokers – a set of servers where the publishes messages are stored
+	Consumer – that subscribes to various topics and pulls data from the brokers.
+
+
+3. Explain the role of the offset.
+	Messages contained in the partitions are assigned a unique ID number that is called the offset. The role of the offset is to uniquely identify every message within the partition.
+
+5. What is the role of the ZooKeeper?
+	Kafka uses Zookeeper to store offsets of messages consumed for a specific topic and partition by a specific Consumer Group.
+
+6. Is it possible to use Kafka without ZooKeeper?
+	No, it is not possible to bypass Zookeeper and connect directly to the Kafka server. If, for some reason, ZooKeeper is down, you cannot service any client request.	
+
+	Kafka can now be used without ZooKeeper as of version 2.8. The release of Kafka 2.8.0 in April 2021 gave us all the opportunity to try it out without ZooKeeper. However, this version is not yet ready for production and lacks some key features.
+	In the previous versions, bypassing Zookeeper and connecting directly to the Kafka broker was not possible. This is because when the Zookeeper is down, it is unable to fulfill client requests.
+
+
+
+7. Explain the concept of Leader and Follower.	
+	Every partition in Kafka has one server which plays the role of a Leader, and none or more servers that act as Followers. The 	Leader performs the task of all read and write requests for the partition, while the role of the Followers is to passively replicate the leader. In the event of the Leader failing, one of the Followers will take on the role of the Leader. This ensures load balancing of the server.
+
+7.1. Explain the concept of Leader and Follower in Kafka.
+	In Kafka, each partition has one server that acts as a Leader and one or more servers that operate as Followers. The Leader is in charge of all read and writes requests for the partition, while the Followers are responsible for passively replicating the leader. In the case that the Leader fails, one of the Followers will assume leadership. The server's load is balanced as a result of this
+
+8. What roles do Replicas and the ISR play?
+	Replicas are essentially a list of nodes that replicate the log for a particular partition irrespective of whether they play the role of the Leader. On the other hand, ISR stands for In-Sync Replicas. It is essentially a set of message replicas that are synced to the leaders.
+
+9. Why are Replications critical in Kafka?
+	Replication ensures that published messages are not lost and can be consumed in the event of any machine error, program error or frequent software upgrades.
+
+
+
+
+
+
+-----------------------------------
+
+ What are the major components of Kafka?
+Topic:
+	A Topic is a category or feed in which records are saved and published.
+	Topics are used to organize all of Kafka's records. Consumer apps read data from topics, whereas producer applications write data to them. Records published to the cluster remain in the cluster for the duration of a configurable retention period.
+	Kafka keeps records in the log, and it's up to the consumers to keep track of where they are in the log (the "offset"). As messages are read, a consumer typically advances the offset in a linear fashion. The consumer, on the other hand, is in charge of the position, as he or she can consume messages in any order. When reprocessing records, for example, a consumer can reset to an older offset.
+Producer:
+	A Kafka producer is a data source for one or more Kafka topics that optimizes, writes, and publishes messages. Partitioning allows Kafka producers to serialize, compress, and load balance data among brokers.
+Consumer:
+	Data is read by consumers by reading messages from topics to which they have subscribed. Consumers will be divided into groups. Each consumer in a consumer group will be responsible for reading a subset of the partitions of each subject to which they have subscribed.
+Broker:
+	A Kafka broker is a server that works as part of a Kafka cluster (in other words, a Kafka cluster is made up of a number of brokers). Multiple brokers typically work together to build a Kafka cluster, which provides load balancing, reliable redundancy, and failover. The cluster is managed and coordinated by brokers using Apache ZooKeeper. Without sacrificing performance, each broker instance can handle read and write volumes of hundreds of thousands per second (and gigabytes of messages). Each broker has its own ID and can be in charge of one or more topic log divisions.
+ZooKeeper 
+	ZooKeeper is also used by Kafka brokers for leader elections, in which a broker is chosen to lead the handling of client requests for a certain partition of a topic. Connecting to any broker will bring a client up to speed with the entire Kafka cluster. A minimum of three brokers should be used to achieve reliable failover; the higher the number of brokers, the more reliable the failover.
+
+Q:-	Can we use Kafka without Zookeeper?
+	Kafka can now be used without ZooKeeper as of version 2.8. The release of Kafka 2.8.0 in April 2021 gave us all the opportunity to try it out without ZooKeeper. However, this version is not yet ready for production and lacks some key features.
+	In the previous versions, bypassing Zookeeper and connecting directly to the Kafka broker was not possible. This is because when the Zookeeper is down, it is unable to fulfill client requests.	

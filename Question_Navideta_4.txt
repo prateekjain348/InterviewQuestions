@@ -1,0 +1,26 @@
+1. Rate yourself in oops, collections, multithreading. descign patten and sql
+2. Inheritance parent child Relationship, which method will be called if 
+	a. overriden a normal mathod
+	b. overriden a static method
+	It is possible to overload a static method in Java, but it is not possible to override a static method. Overloading a static method means having multiple methods with the same name but with different parameter lists within the same class or subclass.
+3.How hashmap works internally, 
+	whats hashcode and equals method, 
+	why to make class as immutable if we wish to use as key in hashmap.	=>	https://www.thetechnojournals.com/2019/10/why-hashmap-key-should-be-immutable-in.html
+	and how to make a class immutable
+		
+
+4. java 8 features ,
+	iterate and search object out of arraylist of big size, using streams 
+
+5.  Arraylist vs linkedlist
+6. 
+Sigleton Design Patters
+what diffferent ways you can achieve singleton design
+how to make it threadsafe?
+
+7. Classnotfound Exception vs classdefinitionnotfound Error
+	ClassNotFoundException is an exception that occurs when you try to load a class at run time using Class. forName() or loadClass() methods and mentioned classes are not found in the classpath. NoClassDefFoundError is an error that occurs when a particular class is present at compile time, but was missing at run time.
+
+
+8.custom exception is runtime Exception or compile time?
+	https://www.tutorialspoint.com/how-can-we-decide-that-custom-exception-should-be-checked-or-unchecked-in-java

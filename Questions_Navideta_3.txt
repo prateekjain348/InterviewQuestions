@@ -1,0 +1,124 @@
+Asked about intro.
+Since I said I work in java7 spring boot 
+So he said he will limit his discussion to java 7 and he won't ask questions from java8.
+
+* https://www.javatpoint.com/java-7-catch-multiple-exceptions
+->features introduced in java 7 for exception handling.	=>	
+	Type Inference for Generic Instance Creation => List<Integer> list = new List<>(); // Here, we just used diamond  
+	String in switch statement (Java 7)
+	Binary Literals (Java 7)	=>	 int i1 = 0b101; // 5     // Using b0, The b can be lower or upper case  
+	The try-with-resources (Java 7)	// We have implement Closeable interface.
+	Caching Multiple Exceptions by single catch (Java 7)
+	Underscores in Numeric Literals (Java 7)	=>	int a = 10_00000;  //1000000
+
+-> exception hierarchy	=> Object => Throwable => {Exceptions:{Checked, Unchecked} , Error: {Virtual Machine Error, Assertion Error}}
+
+-> output of code based on try catch finally block
+-> runtime exception
+	{
+		Generally RuntimeExceptions are exceptions that can be prevented programmatically. E.g NullPointerException, 	ArrayIndexOutOfBoundException. If you check for null before calling any method, NullPointerException would never occur. Similarly ArrayIndexOutOfBoundException would never occur if you check the index first. RuntimeException are not checked by the compiler, so it is clean code.
+	}
+
+-> checked exception
+	{
+		These are the exceptions that are checked at compile time. If some code within a method throws a checked exception, then the method must either handle the exception or it must specify the exception using the throws keyword. 
+	}
+-> write custom exception  => extends Exception Need Practice.
+-> string immutability in java {
+	 String references are used to store various attributes like username, password, etc. In Java, String objects are immutable. Immutable simply means unmodifiable or unchangeable.
+}
+-> string builder vs string buffer vs string{
+	Mutability,
+	If a string is going to remain constant throughout the program, then use the String class object because a String object is immutable.
+	If a string can change (for example: lots of logic and operations in the construction of the string) and will only be accessed from a single thread, using a StringBuilder is good enough.
+	If a string can change and will be accessed from multiple threads, use a StringBuffer because StringBuffer is synchronous, so you have thread-safety.	
+}
+-> final vs finally vs finalize{
+	final is the keyword, finally is the block, finalize is the method.
+		Final keyword is used with the classes, methods and variables.
+		Finally block is always related to the try and catch block in exception handling.
+		finalize() method is used with the objects.
+	Final method is executed only when we call it.
+	Finally block is executed as soon as the try-catch block is executed.
+	finalize method is executed just before the object is destroyed.		
+}
+
+Collection
+->Custom sorting{
+	In order to sort Employee object on different criteria, we need to create multiple comparators e.g. NameComparator, AgeComparator, and SalaryComparator, this is known as custom sorting in Java. This is different from the natural ordering of objects, provided by the compareTo() method of java.lang.Comparable interface
+}
+
+-> comparable vs comparator
+
+
+Multithreading:	https://www.geeksforgeeks.org/inter-thread-communication-java/
+-> inter thread communication{
+	To avoid polling, Java uses three methods, namely, wait(), notify(), and notifyAll(). All these methods belong to object class as final so that all classes have them. They must be used within a synchronized block only. 
+
+	wait(): It tells the calling thread to give up the lock and go to sleep until some other thread enters the same monitor and calls notify().
+	notify(): It wakes up one single thread called wait() on the same object. It should be noted that calling notify() does not give up a lock on a resource.
+	notifyAll(): It wakes up all the threads called wait() on the same object.
+}
+
+
+Data structures.
+Asked about data structures I'm comfortable with.
+
+I said trees linkedlist arrays.
+
+So he asked:
+-> Level order traversal if binary tree
+-> left view of tree
+
+
+
+
+Design patterns, https://stackoverflow.com/questions/11553804/design-patterns-with-real-time-example
+			https://www.tutorialspoint.com/design_pattern/design_pattern_overview.htm
+
+LinkedIn list
+	https://www.geeksforgeeks.org/write-a-c-function-to-print-the-middle-of-the-linked-list/
+
+Point of intersection of 2 linked list
+5 most recurring working in a text file
+Class lvl vs object lvl synchronisation
+	1
+
+	Object:- 
+		It can be used when you want non-static method or non-static block of the code should be accessed by only one thread.
+		It should always be used to make non-static data thread safe. 
+		Every object the class may have their own lock.
+
+	Class:- 
+		It can be used when we want to prevent multiple threads to enter the synchronized block in any of all available instances on runtime.
+		It should always be used to make static data thread safe. 
+		Multiple objects of class may exist but there is always one class’s class object lock available.
+
+
+
+Project Overview and code flow. 
+
+Question from Spring Boot:
+
+Spring vs Spring boot, dependency injection, exception handling, thread vs process, Simple Annotations questions. 
+
+Apart from that:
+Collection framework questions. 
+
+
+Not much asked from Rest, sql and Hibernate
+
+
+
+According to documentaion @Repository,@Service,@Controller are all synonyms. They all are just specializations of @Component annotation. So, generally, they can be used one instead of other. But ... you should not do this.
+
+First reason: any of these annotations make clear the role of your component in the application. Shows - is this component belongs to the controller, service, or data layer.
+
+Second reason: some of these annotations processed differently by different Spring modules. For example, Spring Data JPA will process @Repository and will try to replace with implementation any interface marked by this annotation. Spring also will apply automatic exception translation to such classes. Another example: Spring Web MVC processes @Controller, and uses classes marked with it in URL mappings.
+
+
+We typically use @Controller in combination with a @RequestMapping annotation for request handling methods.
+@RestController is a specialized version of the controller. It includes the @Controller and @ResponseBody annotations, and as a result, simplifies the controller implementation:
+The controller is annotated with the @RestController annotation; therefore, the @ResponseBody isn't required.
+
+1. The @Controller is a common annotation that is used to mark a class as Spring MVC Controller while @RestController is a special controller used in RESTFul web services and the equivalent of @Controller + @ResponseBody.

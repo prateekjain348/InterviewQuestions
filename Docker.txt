@@ -1,0 +1,50 @@
+https://www.interviewbit.com/docker-interview-questions/
+
+
+1. Can you tell something about docker container?
+	In simplest terms, docker containers consist of applications and all their dependencies.
+	They share the kernel and system resources with other containers and run as isolated systems in the host operating system.
+	The main aim of docker containers is to get rid of the infrastructure dependency while deploying and running applications. This means that any containerized application can run on any platform irrespective of the infrastructure being used beneath.
+	Technically, they are just the runtime instances of docker images.
+
+
+2. What are docker images?
+	They are executable packages(bundled with application code & dependencies, software packages, etc.) for the purpose of creating containers. Docker images can be deployed to any docker environment and the containers can be spun up there to run the application.
+
+3. What is a DockerFile?
+	It is a text file that has all commands which need to be run for building a given image.
+
+5. What can you tell about Docker Compose?
+	It is a YAML file consisting of all the details regarding various services, networks, and volumes that are needed for setting up the Docker-based application. So, docker-compose is used for creating multiple containers, host them and establish communication between them. For the purpose of communication amongst the containers, ports are exposed by each and every container.
+
+
+7. What is the docker command that lists the status of all docker containers?
+In order to get the status of all the containers, we run the below command: docker ps -a
+
+
+27. Can you differentiate between Daemon Logging and Container Logging?
+In docker, logging is supported at 2 levels and they are logging at the Daemon level or logging at the Container level.
+Daemon Level: This kind of logging has four levels- Debug, Info, Error, and Fatal.
+- Debug has all the data that happened during the execution of the daemon process.
+- Info carries all the information along with the error information during the execution of the daemon process.
+- Errors have those errors that occurred during the execution of the daemon process.
+- Fatal has the fatal errors that occurred during the execution.
+Container Level:
+- Container level logging can be done using the command: sudo docker run –it <container_name> /bin/bash
+- In order to check for the container level logs, we can run the command: sudo docker logs <container_id>
+
+
+31. Can we use JSON instead of YAML while developing docker-compose file in Docker?
+	Yes! It can be used. In order to run docker-compose with JSON, docker-compose -f docker-compose.json up can be used.
+
+33. Describe the lifecycle of Docker Container?
+	The different stages of the docker container from the start of creating it to its end are called the docker container life cycle. 
+	The most important stages are:
+
+	Created: This is the state where the container has just been created new but not started yet.
+	Running: In this state, the container would be running with all its associated processes.
+	Paused: This state happens when the running container has been paused.
+	Stopped: This state happens when the running container has been stopped.
+	Deleted: In this, the container is in a dead state.
+
+	

@@ -1,0 +1,90 @@
+https://www.interviewbit.com/mongodb-interview-questions/
+
+
+2. What is a Document in MongoDB?
+A Document in MongoDB is an ordered set of keys with associated values. It is represented by a map, hash, or dictionary. In JavaScript, documents are represented as objects:
+	{"greeting" : "Hello world!"}
+
+3. What is a Collection in MongoDB?
+	A collection in MongoDB is a group of documents. If a document is the MongoDB analog of a row in a relational database, then a collection can be thought of as the analog to a table.
+	Documents within a single collection can have any number of different “shapes.”, i.e. collections have dynamic schemas. 
+	For example, both of the following documents could be stored in a single collection:
+
+	{"greeting" : "Hello world!", "views": 3}
+	{"signoff": "Good bye"}
+
+What are some features of MongoDB?
+	Indexing: It supports generic secondary indexes and provides unique, compound, geospatial, and full-text indexing capabilities as well.
+	Aggregation: It provides an aggregation framework based on the concept of data processing pipelines.
+	Special collection and index types: It supports time-to-live (TTL) collections for data that should expire at a certain time
+	File storage: It supports an easy-to-use protocol for storing large files and file metadata.
+	Sharding: Sharding is the process of splitting data up across machines.
+
+ How to add data in MongoDB?
+ 	The basic method for adding data to MongoDB is “inserts”. To insert a single document, use the collection’s insertOne method:
+
+	> db.books.insertOne({"title" : "Start With Why"})
+	For inserting multiple documents into a collection, we use insertMany. This method enables passing an array of documents to the database.
+
+
+How do you Update a Document?
+	Once a document is stored in the database, it can be changed using one of several update methods: updateOne, updateMany, and replaceOne. updateOne and updateMany each takes a filter document as their first parameter and a modifier document, which describes changes to make, as the second parameter.
+
+10. How do you Delete a Document?
+	The CRUD API in MongoDB provides deleteOne and deleteMany for this purpose. Both of these methods take a filter document as their first parameter. The filter specifies a set of criteria to match against in removing documents.
+
+	For example:
+	> db.books.deleteOne({"_id" : 3})			
+
+11. How to perform queries in MongoDB?
+	The find method is used to perform queries in MongoDB. Querying returns a subset of documents in a collection, from no documents at all to the entire collection. Which documents get returned is determined by the first argument to find, which is a document specifying the query criteria.
+
+	Example:
+	> db.users.find({"age" : 24})
+
+
+13. When to use MongoDB?
+	You should use MongoDB when you are building internet and business applications that need to evolve quickly and scale elegantly. MongoDB is popular with developers of all kinds who are building scalable applications using agile methodologies.
+	MongoDB is a great choice if one needs to:
+
+	Support a rapid iterative development.
+	Scale to high levels of read and write traffic - MongoDB supports horizontal scaling through Sharding, distributing data across several machines, and facilitating high throughput operations with large sets of data.
+	Scale your data repository to a massive size.
+	Evolve the type of deployment as the business changes.
+	Store, manage and search data with text, geospatial, or time-series dimensions.
+
+15. Explain the term “Indexing” in MongoDB.
+	In MongoDB, indexes help in efficiently resolving queries. What an Index does is that it stores a small part of the data set in a form that is easy to traverse. The index stores the value of the specific field or set of fields, ordered by the value of the field as specified in the index. 
+	MongoDB’s indexes work almost identically to typical relational database indexes.
+
+	Indexes look at an ordered list with references to the content. These in turn allow MongoDB to query orders of magnitude faster. To create an index, use the createIndex collection method.
+
+	For example:
+
+	> db.users.find({"username": "user101"}).explain("executionStats")
+
+	Here, executionStats mode helps us understand the effect of using an index to satisfy queries.
+
+
+18. Explain the SET Modifier in MongoDB?
+	If the value of a field does not yet exist, the "$set" sets the value. This can be useful for updating schemas or adding user-defined keys.
+	Example:
+
+	> db.users.findOne()
+	{
+	   "_id" : ObjectId("4b253b067525f35f94b60a31"),
+	   "name" : "alice",
+	   "age" : 23,
+	   "sex" : "female",
+	   "location" : "India"
+	}
+	To add a field to this, we use “$set”:
+
+	> db.users.updateOne({"_id" : 
+	ObjectId("4b253b067525f35f94b60a31")},
+	... {"$set" : {"favorite book" : "Start with Why"}}) 
+
+
+21. What is the Aggregation Framework in MongoDB?
+	The aggregation framework is a set of analytics tools within MongoDB that allow you to do analytics on documents in one or more collections.
+	

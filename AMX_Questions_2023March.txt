@@ -1,0 +1,206 @@
+What all exceptions you have come accressed?
+	NullPointerException
+	ArithmeticException
+	IOException
+	NoSuchMethodException
+	FileNotFoundException
+	NumberFormatException
+
+
+List of exceptions we got while connecting with database?	-
+On the load of startup I want to initialize this variable. -
+
+
+
+Worked on Custom Exceptions?	- 	https://www.youtube.com/watch?v=V_jVp6WdW0Y
+	public class WrongFileNameException extends Exception {  
+	    public WrongFileNameException(String errorMessage) {  
+	    	super(errorMessage);  
+	    }  
+	}  
+	
+	psvm(String args[]){
+		throw new WrongFileNameException("23223&%$^.txt");   
+	}
+
+
+What is compileTime and what is runTime Error?
+	A compile-time error generally refers to the errors that correspond to the semantics or syntax. A runtime error refers to the error that we encounter during the code execution during runtime.
+
+Create Instance Variable.
+
+When you load the class, value have to be assigned.
+Can we create object of Inerface?
+
+Exception Hierarchy?	https://www.javatpoint.com/exception-handling-in-java
+			  Throwable
+	Exception 			Errors
+	  IOException 		  StackOverflowError
+	  SQL				  OutOfMemoryError
+	  ClassNotFound       VirtualMachineError
+	  Runtime
+	    Arithmetic
+	    NullPointer
+	    NumberFormat
+	    IndexoutofBound
+	     Number_IOFB
+	     String_IOFB
+
+Quesstion 1:	+ 
+	My Answer at 8:17
+	public static void sum(int a, float b) {
+        System.out.println(a + b);
+    }
+
+    public static void sum(float a, int b) {
+        System.out.println(a + b);
+    }
+    sum(2,5);
+
+	Can we use Number to a float? // My answer at 9:42
+
+	If we change return type of 2nd function to int? // 10:46
+		I confirm it will compile successfully? 11:35
+
+Question: 2   -
+	public static void method(Object o) {
+        System.out.println("Object method Invoked");
+    }
+
+    public static void method(String s) {
+        System.out.println("String method Invoked");
+    }
+    Main.method(null);
+    Gave Proper Answer for VarArgs.
+
+Question 3: -
+	Integer num1 = 5000, num2 = 5000;
+    System.out.println(num1 == num2); // false
+
+
+    Integer num5 = 127, num6 = 127;
+    System.out.println(num5 == num6); // true
+
+	Integer num5 = 128, num6 = 128;
+    System.out.println(num5 == num6); // false
+    
+    Integer num3 = 20, num4 = 20;
+    System.out.println(num3 == num4);	// true
+
+
+Question 4: - https://www.javatpoint.com/exception-handling-with-method-overriding
+	If the superclass method does not declare an exception
+		If the superclass method does not declare an exception, subclass overridden method cannot declare the checked exception(like IOException) but it can declare unchecked exception(like ArithmeticException).
+
+	If the superclass method declares an exception
+		If the superclass method declares an exception(ArithmeticException OR IOException), subclass overridden method can declare same, subclass exception or no exception but cannot declare parent exception(Exception it is parent exception of both ArithmeticException OR IOException).
+
+	class parent{ 
+		Nullpointer exception
+	}
+
+	class child{
+		Runtime exception
+	}
+
+	What will happen in this case ?
+
+
+Question 5:
+	List list= List.of(new Person("Prateek",30),
+						new Person("Pramod",20),
+						new Person("Prateek",32));
+	Remove Duplicates.
+	personList.stream()
+                .collect(
+                        collectingAndThen(
+                                toCollection(() -> new TreeSet<>(Comparator.comparing(Person::getI1)))
+                                , ArrayList::new
+                        )
+                );
+
+	What this stream().sorted method accept as parameter? // 26:40
+	On what basis sort will happen in stream().sorted()?	// 
+	Can we use method reference to convert int to string ?
+
+Write a Functional Interface? //31:00
+	An Interface that contains exactly one abstract method is known as functional interface. It can have any number of default, static methods but can contain only one abstract method. It can also declare methods of object class. Functional Interface is also known as Single Abstract Method Interfaces or SAM Interfaces.
+
+What is the use of @FunctionalInterface? //
+	An informative annotation type used to indicate that an interface type declaration is intended to be a functional interface as defined by the Java Language Specification. Conceptually, a functional interface has exactly one abstract method.
+
+Can you create instance of this interface? //34:07
+
+If we write new Eatable(), will it work ? here Eatable is interface. //https://www.javatpoint.com/anonymous-inner-class
+	A class is created, but its name is decided by the compiler, which implements the Eatable interface and provides the implementation of the eat() method.
+	An object of the Anonymous class is created that is referred to by 'p', a reference variable of the Eatable type.
+
+
+What is Executor Framework?	//https://www.javatpoint.com/executor-framework-java
+	The Executor Framework contains a bunch of components that are used to efficiently manage multiple threads. It was released with the JDK 5 which is used to run the Runnable objects without creating new threads every time and also mostly re-using the already created threads.
+
+	public static void main(String[] args) {  
+        //creating an object of ExecutorService with fixed thread pool 5  
+        ExecutorService executorService = Executors.newFixedThreadPool(5);  
+        for (int j = 0; j < 5; j++) {  
+            //creating instance of the Task1 class and pass a value to its constructor   
+            Runnable task = new Task1("" + j);  
+              
+            //executing task using execute() method of the executor  
+            executorService.execute(task);  
+          }  
+        //closing executor  
+        executorService.shutdown();  
+          
+        while (!executorService.isTerminated()) {  
+        }  
+        System.out.println("Finished all threads");  
+    }  
+	If you start Thousand threads, if you infrastructure capable to handling 1000 threads?
+
+Question: 6
+	List list1 = new ArrayList();
+    list1.add("A");
+    list1.add("B");
+
+    List list2 = new ArrayList();
+    list2 .add("C");
+
+    list2.addAll(list1);
+    list1.remove(1);
+    System.out.println("list1: " + list1); // A
+    System.out.println("list2: " + list2); // CAB  (I mistakenly said ABC)	
+
+Asked Springboot Version. (I failed to reply) -
+Bean Cycle? (I failed to reply) -
+	Bean life cycle is managed by the spring container. When we run the program then, first of all, the spring container gets started. After that, the container creates the instance of a bean as per the request, and then dependencies are injected. And finally, the bean is destroyed when the spring container is closed. Therefore, if we want to execute some code on the bean instantiation and just after closing the spring container, then we can write that code inside the custom init() method and the destroy() method.
+
+	1.Container started
+	2.Bean Instantiated
+	3.Dependency Injected
+	4.Custom Init()
+	5.Custom Utility methods
+	6.Custom destroy()
+
+Ways to implement the life cycle of a bean.
+	1. By XML
+	2. By Programmatic Approach
+	3. Using Annotation
+
+Autowire annotation? +
+	@Autowired is an annotation used in Spring Boot to enable automatic dependency injection. It allows the Spring container to provide an instance of a required dependency when a bean is created. This annotation can be used on fields, constructors, and methods to have Spring provide the dependencies automatically
+
+How spring create bean? -
+	In Spring, the objects that form the backbone of your application and that are managed by the Spring IoC container are called beans. A bean is an object that is instantiated, assembled, and otherwise managed by a Spring IoC container.
+
+Conroller vs restController? +
+	@RestController combines Controller and @ResponseBody, 
+
+Embeded servers? -
+	Spring Boot includes support for embedded Tomcat, Jetty, and Undertow servers.
+
+how to switch to another server? -
+What are the ways to access your application.peoperties file, if located on different path?  +
+Have you worked on CI/CD? +
+
+------------------------------------------------------------------------------------------------------------

@@ -1,0 +1,24 @@
+Basic about Current Project I am working on.
+Diff in SQE and MySQL?
+ACID Properties in Database?
+	https://www.geeksforgeeks.org/acid-properties-in-dbms/
+
+Money Transfer
+
+Basic Java:-
+Difference in HashMap, HashTable, ConcurrentHashMap?
+Internal Working of HashMap in Java?
+How concurrency happens?
+How concurrency impacted?
+How does concurrency improve performance?
+
+Design Pattern?
+Singleton(Implementation ) and Factory Design Pattern?
+OverLoading Vs Overwriding ?
+Given an array A[] and a number x, check for pair in A[] with sum as x;
+
+In Tree, Print Level Order.
+In Tree, Print Last Level.
+In Tree, Print Left View.	https://www.geeksforgeeks.org/print-left-view-binary-tree/
+In Tree, Print Right View.	https://www.geeksforgeeks.org/print-right-view-binary-tree-2/?ref=lbp
+In Tree, Print height.	https://www.geeksforgeeks.org/write-a-c-program-to-find-the-maximum-depth-or-height-of-a-tree/

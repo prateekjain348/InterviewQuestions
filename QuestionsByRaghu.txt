@@ -1,0 +1,218 @@
+Some interview questions:
+
+What is AWS Lambda?
+	AWS Lambda is a compute service that lets you run code without provisioning or managing servers. Lambda runs your code on a high-availability compute infrastructure and performs all of the administration of the compute resources, including server and operating system maintenance, capacity provisioning and automatic scaling, and logging. With Lambda, you can run code for virtually any type of application or backend service. All you need to do is supply your code in one of the languages that Lambda supports.
+
+Explain what is lambda?
+	Lambda expressions are a new and important feature included in Java SE 8. They provide a clear and concise way to represent one method interface using an expression. Lambda expressions also improve the Collection libraries making it easier to iterate through, filter, and extract data from a Collection .
+
+	public static void main(String... args) {
+	    Comparator<String> c = (String lhs, String rhs) -> lhs.compareTo(rhs);
+	    int result = c.compare("Hello", "World");
+	}
+
+Factory vs Abstrace Factory
+	Factory Method pattern is responsible for creating products that belong to one family, while Abstract Factory pattern deals with multiple families of products.
+	
+Qualifier Annotation
+	The @Qualifier annotation in Spring is used to differentiate a bean among the same type of bean objects. If we have more than one bean of the same type and want to wire only one of them then use the @Qualifier annotation along with @Autowired to specify which exact bean will be wired.
+
+Primary Annotation
+	@Primary annotation is used to set the preference for same types of beans. Bean with @Primary annotation will be autowired when same types of beans are found. @Primary annotation can be used with @Bean, @Service, @Component and @Repository annotations.
+******************************************
+select * from ((select * from Employee 
+       ORDER BY `sal` DESC limit 6 ) AS T) 
+       ORDER BY T.`sal` ASC limit 1;
+
+SELECT ename,sal from Employee e1 where 
+        N-1 = (SELECT COUNT(DISTINCT sal)from Employee e2 where e2.sal > e1.sal)
+
+Select Salary from table_name order by Salary DESC limit n-1,1;
+******************************************
+
+What is a method reference?
+	Java provides a new feature called method reference in Java 8. Method reference is used to refer method of functional interface. It is compact and easy form of lambda expression. Each time when you are using lambda expression to just referring a method, you can replace your lambda expression with method reference. In this tutorial, we are explaining method reference concept in detail.
+
+	Reference to a static method.
+		Sayable sayable = ClassName::StaticFunName;
+
+	Reference to an instance method.
+		BiFunction<Integer, Integer, Integer>adder = new Arithmetic()::add; 
+
+	Reference to a constructor.
+		Messageable hello = Message::new;  
+
+
+What is a flat map?	=> https://www.geeksforgeeks.org/difference-between-map-and-flatmap-in-java-stream/
+	In Java 8 Streams, the flatMap() method applies operation as a mapper function and provides a stream of element values. It means that in each iteration of each element the map() method creates a separate new stream. By using the flattening mechanism, it merges all streams into a single resultant stream.
+
+	List of list-[[1, 2], [3, 4], [5, 6], [7, 8]]
+	List generate by flatMap-[1, 2, 3, 4, 5, 6, 7, 8]
+
+What is Functional Interface in Java 8 ?
+	A functional interface is an interface that consists of one abstract method. These interfaces can show only one functionality. Beyond Java 8, lambda expressions can be used to represent the instance of a functional interface. Functional Interfaces can contain any number of static and default methods. Consumer, Predicate, Function, Unary Operator, Binary Operator are some of the examples of predefined functional interfaces.
+
+What are the different types of different functional interfaces in Java 8? https://blog.knoldus.com/functional-interfaces-in-java-8/
+	Consumer – BiConsumer
+		The Consumer interface shows a function that can be used to take one parameter and give output, which means these functions do not return anything. Since Java 8 is introduced, we can use functional programming as well.
+		We use accept() in the form of a lambda expression to take one argument and do not return any value. Consumers can be used when there is no need to return any value.
+			Consumer<String> consumer = (s) -> System.out.println(s.toUpperCase());
+	           consumer.accept("Java 8");
+	        BiConsumer<String, String> biConsumer = (a,b) -> System.out.println("x: "+ a +", b: "+b);
+	        	biConsumer.accept("Java8", "Implementation");
+
+	Predicate-BiPredicate
+		Predicate interface is a part of java.util.Function package. It shows a method that takes different arguments and returns boolean as value. These interfaces can be helpful in testing and improving manageability.
+			Predicate<Integer> predict = (a) -> i%2 == 0;
+	   			System.out.println(p.test(2));
+
+		   	BiPredicate<Integer, Integer> biPredicate1 = (n1, n2) -> (n1 % n2 == 0);
+		    BiPredicate<Integer, Integer> biPredicate2 = (n1, n2) -> (n1 * n2 > 100);
+	    	   System.out.println(biPredicate1.and(biPredicate2).test(120, 6)); // false
+
+	Function
+		Function interface shows a method that can take one argument and give output or can return any value. This interface exists in java.util.function package as the release version of Java 8.
+
+		We can use apply() method in the form of a lambda expression to take the parameters and to return the values after applying the function on the given parameters.
+
+			public class FunctionDemo {
+			   static Function<String, String> function = (name) -> name.toUpperCase();
+			   public static void main (String args[]) {
+			        System.out.println("Result is: "+function.apply("Java8")); // JAVA8
+			   }
+			}
+
+	Unary Operator
+		A unary Operator is an interface that shows a function that can take one parameter and performs the operation. It exists in java.util.function package as the release version of Java 8. And it is helpful to use when we want the same value as input and output after performing the operation.
+
+		We can use accept() method in the form of a lambda expression to take the parameters and to return the values after performing the given operation.
+
+			public class UnaryOperatorDemo {
+			   static UnaryOperator<String> unaryOperator = (a) -> a.concat("Default");
+			   public static void main (String args[]) {
+			        System.out.println(unaryOperator.apply("Java8"));
+			   }
+			}
+
+	Binary Operator
+		A binary Operator is an interface that shows a function that can take two parameters and performs the operation to return the value. It exists in java.util.function package as the release version of Java 8. And it is helpful to use when we want the same value as input and output after performing a given operation.
+
+		public class BinaryOperatorDemo {
+		   static Comparator<Integer> comparator = (a,b) -> a.compareTo(b);
+		   public static void main (String args[]) {
+		   	BinaryOperator<Integer> binaryOperator = (a,b) -> a*b;
+			System.out.println(binaryOperator.apply(1,2));
+				
+			BinaryOperator<Integer> result = BinaryOperator.result(comparator);
+			System.out.println("Result is: " result.apply(1,2)); // 2
+		   }
+		}
+
+
+
+How do streams work?	https://www.geeksforgeeks.org/stream-in-java/
+	A stream consists of source followed by zero or more intermediate methods combined together (pipelined) and a terminal method to process the objects obtained from the source as per the methods described.
+	Stream is used to compute elements as per the pipelined methods without altering the original value of the object.
+
+	Intermediate Operations: map, filter, sorted etc.
+	Terminal Operations: collect, foreach, reduce etc.
+
+Have you used functional interfaces with Streams?
+	There are two “modes” for a stream: sequential and parallel. In sequential mode each item in the stream is read and processed, and then the next item is read. In parallel mode the data is split into multiple segments using a Spliterator. Each of the segments is then processed individually on possibly different threads.
+
+	//Sequential int sum = intList.stream().reduce(0, Integer::sum); 
+	//Parrelel int sum = intList.parallelStream().reduce(0, Integer::sum);
+
+Springboot
+
+What is the difference between spring and springboot?	https://www.geeksforgeeks.org/difference-between-spring-and-spring-boot/
+	
+	1.	Spring is an open-source lightweight framework widely used to develop enterprise applications.	
+		Spring Boot is built on top of the conventional spring framework, widely used to develop REST APIs.
+	2.	The most important feature of the Spring Framework is dependency injection.	
+		The most important feature of the Spring Boot is Autoconfiguration.
+	3. 	It helps to create a loosely coupled application.	
+		It helps to create a stand-alone application.
+	4. 	To run the Spring application, we need to set the server explicitly.	
+		Spring Boot provides embedded servers such as Tomcat and Jetty etc.
+	5.	To run the Spring application, a deployment descriptor is required.	
+		There is no requirement for a deployment descriptor.
+	6.	To create a Spring application, the developers write lots of code.	
+		It reduces the lines of code.
+	7.	It doesn’t provide support for the in-memory database.	
+		It provides support for the in-memory database such as H2.
+	8.	Developers need to write boilerplate code for smaller tasks.	
+		In Spring Boot, there is reduction in boilerplate code.
+	9.	Developers have to define dependencies manually in the pom.xml file.	
+		pom.xml file internally handles the required dependencies.
+
+What is IOC in Spring?
+	Spring IoC (Inversion of Control) Container is the core of Spring Framework. It creates the objects, configures and assembles their dependencies, manages their entire life cycle. The Container uses Dependency Injection(DI) to manage the components that make up the application.
+	
+How do you monitor Springboot?
+What is Spring Boot Actuator?
+what is Springboot autoconfiguration?
+What are profiles in springboot?
+What is  configuration.yml?
+
+Have you heard about time complexity? What is it?
+What is BigO?
+
+
+AWS
+
+What are the different services in AWS?
+Have you worked on S3?
+What type of EC2 have you used in your project?
+
+What is the use of kubernetes?
+How do you send containerized docker images sent to the database environment? ECR repo.
+What are the different levels in Kubernetes?
+What are the different components in the kubernetes cluster?
+What is the smallest unit in the kubernetes cluster?
+Is there anything inside pods?
+
+
+Observability:
+
+What are the key metrics you monitor in lambda?
+How do you visualize your logs?
+How do you gather metrics such as memory, utilization, execution time, failure & errors
+Have you used Appdynamics, Splunk, SignalFX, etc.?
+What is distributed tracing?
+
+
+Other questions:
+
+Can you do a migration from Oracle to Postgres?
+What tools does AWS have for migration?
+What happens when a transaction hits your website? What is F5/load balancing, what is SSL offloading?
+Can you deploy certifications on application servers?
+What is distributed tracing? What are the tools available?
+How do you ingest data in splunk?
+Can you create dashboards and alerts in splunk?
+Can you create VMs and security groups?
+What is canary deployment?
+What is your automation experience working with Jenkins pipeline?
+If you have an application that is deployed in active/active regions. How do you keep the applications in sync?
+Also how do you keep code in data center 1 and data center 2 in sync in getting 50% each?
+How do you go about debugging your microservices?
+How do you implement Dependency injection?How do you test the fault tolerance of your application?
+When do you use SQL and when NOSQL?
+What monitoring tools do you use?
+What is distributed tracing?
+Difference between unit tests, functional tests and integration tests?
+What do you know about peer testing?
+Why is Kafka server needed?
+In Microservices, how does one service talk with another service?
+What is service discovery? Have you used service registry?
+What is the difference between authorization and authentication?
+If you client calls one microservice which has to call two others. Let's say one of the end microservice fails, how do you tell which microservice it was?
+Do you use unique identifiers?
+What are Java 8 streams and when do you use it?
+Have you nodeJS?
+How do you start a project in springboot and microservices?
+What is Eureka registry?
+If you are monitoring Java applications in production, what metrics would you use to monitor those applications?
+Do you know about distributed tracing?
+How do you send metrics to Datadog?
